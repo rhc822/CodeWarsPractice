@@ -6,7 +6,11 @@ namespace CodeWarsPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Enter a word!");
+            string word = Console.ReadLine();
+            Console.WriteLine(Isogram.IsIsogram(word));
         }
+
+
     }
 }
