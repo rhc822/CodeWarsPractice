@@ -21,14 +21,26 @@ namespace CodeWarsPractice
 
         public static bool IsIsogram(string word)
         {
-            if (word.Contains("a"))
+            //Try using the TRIM to remove the character and then test to see if any more exist 
+            char[] test = word.ToCharArray();
+            test.Count();
+            // loop through each letter of the entered word
+            foreach (char letter in word)
             {
-                return true;
+                // Count how many times the letter appears in the word
+                int result = word.Count(letter);
+
+                // if the result is greater than or equal to two, return false
+                if ()
+                {
+                    return false;
+                }
             }
-            else
-            {
-                return false;
-            }
+            
+            // at the end of the loop return true
+            return true;
+
+            
         }
 
 
