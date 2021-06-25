@@ -6,9 +6,9 @@ namespace CodeWarsPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a word!");
-            string myString = Console.ReadLine();
-            Console.WriteLine(ExesAndOhs.ContainsEqualXsAndOs(myString));
+            Console.WriteLine("Enter a number!");
+            ulong myLong = Convert.ToUInt64(Console.ReadLine());
+            Console.WriteLine(PersistentBugger.Persistence(myLong));
             
             
             
