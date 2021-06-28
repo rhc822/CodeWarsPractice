@@ -7,7 +7,7 @@ namespace CodeWarsPractice
         static void Main(string[] args)
         {
             Console.WriteLine("Enter a number!");
-            ulong myLong = Convert.ToUInt64(Console.ReadLine());
+            long myLong = Convert.ToInt64(Console.ReadLine());
             Console.WriteLine(PersistentBugger.Persistence(myLong));
             
             

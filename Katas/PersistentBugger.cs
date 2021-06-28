@@ -24,7 +24,7 @@ namespace CodeWarsPractice
         
         */
 
-        public static int Persistence(ulong n)
+        public static int Persistence(long n)
         {
             if (n <= 9)
             {
@@ -32,29 +32,36 @@ namespace CodeWarsPractice
             }
 
             int counter = 0; // Set the counter
-            while (n >= 9) // Check for single digit
+
+            while (n >= 9) // Check for single digit in this loop
             {
                 counter++; // Increment the counter by one
 
-                var ulongToStringList = new List<string>(); // create a "container" for each digit
-                string nToString = n.ToString(); // enables length property in for loop
+                // Converting to string enables both LENGTH property and individual member (digit) access in loops below
+                var stringList = new List<string>();
+                string nToString = n.ToString(); 
 
                 for (int i = 0; i < nToString.Length; i++)
                 {
-                    ulongToStringList.Add(Convert.ToString(nToString[i])); // Ccan't access individual digits of a ulong type via square bracket indexing so first converting to string List
+                    stringList.Add(Convert.ToString(nToString[i]));
                 }
 
-                var stringListtoULongList = new List<ulong>();
-                stringListtoULongList = ulongToStringList.ConvertAll(s => Convert.ToUInt64(s)); //now converting back to ulong list
-                ulong z = 1; // variable to store the result of calcuations
+                // Converting back to long list
+                var longList = new List<long>();
+                longList = stringList.ConvertAll(s => Convert.ToInt64(s));
 
-                for (int j = 0; j < stringListtoULongList.Count; j++)
+                // variable to store the result of calcuations below
+                long multiplcationResult = 1;
+
+                for (int j = 0; j < longList.Count; j++)
                 {
 
-                    z *= stringListtoULongList[j];
+                    multiplcationResult *= longList[j];
                 }
 
-                n = z; // Set the reference variable to the original variable n before again checking condition at beginning of while loop
+                // Set the original variable n to result
+                n = multiplcationResult;
+
             }
 
             return counter;
