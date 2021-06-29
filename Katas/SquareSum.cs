@@ -19,7 +19,13 @@ namespace CodeWarsPractice
 
         public static int SquareSumCalc(int[] n)
         {
-            return 5;
+            double result = 0;
+            foreach(int digit in n)
+            {
+                result += Math.Pow(digit, 2);
+            }
+
+            return Convert.ToInt32(result);
         }
 
     }
