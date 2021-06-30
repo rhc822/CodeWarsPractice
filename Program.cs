@@ -7,21 +7,28 @@ namespace CodeWarsPractice
     {
         static void Main(string[] args)
         {
-            // Square Sum
-            List<int> intList = new List<int>();
-            Console.WriteLine("Enter a number NOW!....please");
+            Console.WriteLine("Enter a string");
             string myString = Console.ReadLine();
-            foreach(char digit in myString)
-            {
-                intList.Add(Convert.ToInt32(digit - '0')); // Must subtract from char '0' to get actual digit value instead of internal representation of that value
-            }
-            int[] myIntArray = intList.ToArray();
-            
-            Console.WriteLine(SquareSum.SquareSumCalc(myIntArray));
-            
-            
-            
-            
+            Console.WriteLine(JadenCasingStrings.ToJadenCase(myString));
+
+
+
+
+            // Square Sum
+            //List<int> intList = new List<int>();
+            //Console.WriteLine("Enter a number NOW!....please");
+            //string myString = Console.ReadLine();
+            //foreach(char digit in myString)
+            //{
+            //    intList.Add(Convert.ToInt32(digit - '0')); // Must subtract from char '0' to get actual digit value instead of internal representation of that value
+            //}
+            //int[] myIntArray = intList.ToArray();
+
+            //Console.WriteLine(SquareSum.SquareSumCalc(myIntArray));
+
+
+
+
             // Persistent Bugger
             //Console.WriteLine("Enter a number!");
             //long myLong = Convert.ToInt64(Console.ReadLine());
