@@ -24,33 +24,34 @@ namespace CodeWarsPractice
 
         public static string ToJadenCase(this string phrase) // the "this" indicates this is a c sharp 'extension' method
         {
+            phrase = phrase.ToUpper();
             string jadenCaseSentence = "";
-            // loop through the string and look for blank spaces
+
             for (int i = 0; i < phrase.Length; i++)
             {
-               // if (phrase.Length == 1)
-                //{
-                   // jadenCaseSentence += Convert.ToString(phrase[0]).ToUpper().;
-                  //  continue;
-                //}
-                
+
                 if (phrase[i] == ' ')
                 {
                     jadenCaseSentence += phrase[i];
-                    // capitalize the beginning letter of the word after the space
-                    jadenCaseSentence += Convert.ToString(phrase[i + 1]).ToUpper();
+                    jadenCaseSentence += phrase[i + 1];
                     i++;
                 }
 
                 else
                 {
-                    jadenCaseSentence += Convert.ToString(phrase[i]);
+                    jadenCaseSentence += Convert.ToString(phrase[i]).ToLower();
                 } 
                     
             }
-            
+
+            string firstLetterString = Convert.ToString(phrase[0]).ToUpper();
+            char firstLetterChar = Convert.ToChar(firstLetterString);
+            StringBuilder sb = new StringBuilder(jadenCaseSentence);
+            sb[0] = firstLetterChar;
+            jadenCaseSentence = sb.ToString();
+
             Console.WriteLine(jadenCaseSentence);
-            return String.Empty;
+            return jadenCaseSentence;
         }
 
     }
