@@ -25,14 +25,25 @@ namespace CodeWarsPractice
 
         public static int DuplicateCount(string str)
         {
-            // lower all characters
-            // put chars in a chararray
-            // create duplicate counter
-            // for loop over array
-            // if string contains letter[0] (then continue)
-            // increment duplicate counter by one
-            // return duplicate counter
-            
+            var myList = str.ToLower().ToList();
+            int duplicateCounter = 0;
+            List<char> uniqueCharacters = new List<char>();
+            foreach (char character in myList)
+            {
+                if (uniqueCharacters.Contains(character))
+                    {
+                        continue;
+                    }
+                uniqueCharacters.Add(character);
+                int charCounter = str.ToLower().Count(c => c == character);
+                if (charCounter >= 2)
+                {
+                    duplicateCounter++;
+                    continue;
+                }
+            }
+            return duplicateCounter;
+              
         }
 
     }
