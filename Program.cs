@@ -7,12 +7,15 @@ namespace CodeWarsPractice
     {
         static void Main(string[] args)
         {
+            //Counting Duplicates
             Console.WriteLine("Enter a string");
             string myString = Console.ReadLine();
-            Console.WriteLine(JadenCasingStrings.ToJadenCase(myString));
+            Console.WriteLine(CountingDuplicates.DuplicateCount(myString));
 
-
-
+            //Jaden Case
+            //Console.WriteLine("Enter a string");
+            //string myString = Console.ReadLine();
+            //Console.WriteLine(JadenCasingStrings.ToJadenCase(myString));
 
             // Square Sum
             //List<int> intList = new List<int>();
