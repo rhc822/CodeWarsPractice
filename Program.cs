@@ -7,10 +7,16 @@ namespace CodeWarsPractice
     {
         static void Main(string[] args)
         {
-            //Counting Duplicates
+
+            // Vowel Count
             Console.WriteLine("Enter a string");
             string myString = Console.ReadLine();
-            Console.WriteLine(CountingDuplicates.DuplicateCount(myString));
+            Console.WriteLine(VowelCount.GetVowelCount(myString));
+
+            //Counting Duplicates
+            //Console.WriteLine("Enter a string");
+            //string myString = Console.ReadLine();
+            //Console.WriteLine(CountingDuplicates.DuplicateCount(myString));
 
             //Jaden Case
             //Console.WriteLine("Enter a string");
