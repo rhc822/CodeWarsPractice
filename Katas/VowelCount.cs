@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+
 
 namespace CodeWarsPractice
 {
@@ -17,10 +19,22 @@ namespace CodeWarsPractice
         */
         public static int GetVowelCount(string str)
         {
-            //int vowelCount = 0;
+            int vowelCount = 0;
+
+            Regex rx = new Regex("[aeiou]", RegexOptions.IgnoreCase);
+            MatchCollection matches = rx.Matches(str);
+            foreach(Match match in matches)
+            {
+                vowelCount++;
+            }
+            return vowelCount;
+
+
+
+
 
             // Your code here
-            return 0987;
+            
             //return vowelCount;
         }
     }
