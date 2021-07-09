@@ -7,27 +7,26 @@ namespace CodeWarsPractice
     {
         static void Main(string[] args)
         {
-
-            // Vowel Count
             Console.WriteLine("Enter a string");
             string myString = Console.ReadLine();
-            Console.WriteLine(VowelCount.GetVowelCount(myString));
 
-            //Counting Duplicates
-            //Console.WriteLine("Enter a string");
-            //string myString = Console.ReadLine();
-            //Console.WriteLine(CountingDuplicates.DuplicateCount(myString));
+            // Dubstep
+            Console.WriteLine(Dubstep.SongDecoder(myString));
 
-            //Jaden Case
-            //Console.WriteLine("Enter a string");
-            //string myString = Console.ReadLine();
-            //Console.WriteLine(JadenCasingStrings.ToJadenCase(myString));
+            // Vowel Count
+            // Console.WriteLine(VowelCount.GetVowelCount(myString));
+
+            // Counting Duplicates
+            // Console.WriteLine(CountingDuplicates.DuplicateCount(myString));
+
+            // Jaden Case
+            // Console.WriteLine(JadenCasingStrings.ToJadenCase(myString));
 
             // Square Sum
-            //List<int> intList = new List<int>();
-            //Console.WriteLine("Enter a number NOW!....please");
-            //string myString = Console.ReadLine();
-            //foreach(char digit in myString)
+            // List<int> intList = new List<int>();
+            // Console.WriteLine("Enter a number NOW!....please");
+            // string myString = Console.ReadLine();
+            // foreach(char digit in myString)
             //{
             //    intList.Add(Convert.ToInt32(digit - '0')); // Must subtract from char '0' to get actual digit value instead of internal representation of that value
             //}
@@ -35,13 +34,10 @@ namespace CodeWarsPractice
 
             //Console.WriteLine(SquareSum.SquareSumCalc(myIntArray));
 
-
-
-
             // Persistent Bugger
-            //Console.WriteLine("Enter a number!");
-            //long myLong = Convert.ToInt64(Console.ReadLine());
-            //Console.WriteLine(PersistentBugger.Persistence(myLong));
+            // Console.WriteLine("Enter a number!");
+            // long myLong = Convert.ToInt64(Console.ReadLine());
+            // Console.WriteLine(PersistentBugger.Persistence(myLong));
 
             // Isogram: enter a word and set up checks to ensure it is only one word, not phrase or sentence
             //if (word.Contains(" "))
