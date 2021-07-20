@@ -31,20 +31,25 @@ namespace CodeWarsPractice
         public static string SongDecoder(string input)
         {
             string myString = input.ToUpper();// all uppercase
-            // validation: can't be empty string, length can't be longer than 200 characters
-            if (String.IsNullOrEmpty(input))
+            string result = "";
+            Regex rx = new Regex(@"(WUB)"); // searches for the 'WUB' pattern
+            MatchCollection matches = rx.Matches(myString);
+
+            if (String.IsNullOrEmpty(myString))
             {
                 return "\nYou cannot submit an empty string";
             } 
 
-            if (input.Length > 200)
+            if (myString.Length > 200)
             {
                 return "\nPlease input a string with length less than 200 characters ";
             }
 
-            string result = "";
-            Regex rx = new Regex(@"(WUB)"); // searches for the 'WUB' pattern
-            MatchCollection matches = rx.Matches(myString);
+            if (matches.Count() == 0)
+            {
+                return myString;
+            }
+
             foreach (Match match in matches)
             {
                 result = myString.Replace(Convert.ToString(match), " "); // replaces each pattern occurence with empty space
