@@ -43,15 +43,14 @@ namespace CodeWarsPractice
             }
 
             string result = "";
-            Regex rx = new Regex("WUB");
+            Regex rx = new Regex(@"(WUB)"); // searches for the 'WUB' pattern
             MatchCollection matches = rx.Matches(myString);
             foreach (Match match in matches)
             {
-                result = myString.Replace(Convert.ToString(match), " ");
-                //if (result[0] == " ") { }  
+                result = myString.Replace(Convert.ToString(match), " "); // replaces each pattern occurence with empty space
             }
 
-            return result;
+            return string.Join(" ", result.Split().Where(x => x != "")); // removes additional empty spaces
 
         }
     }
