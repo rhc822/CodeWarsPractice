@@ -42,8 +42,15 @@ namespace CodeWarsPractice
 
     class Diamond
     {
-        public static string print(int n)
+        public static string Print(int n)
         {
+            string a = "*";
+            string newString = "";
+            for (var i = 0; i < n; i++) 
+                {
+                    newString += a;
+                }
+            return newString;
             // take in the integer n
             // string base = "*\n"
             // List string diamondList = new List()
@@ -61,7 +68,7 @@ namespace CodeWarsPractice
             // if 3, print this...
             // if 5, print this...
             // better algorithm, hm, 
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

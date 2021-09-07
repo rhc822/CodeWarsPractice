@@ -7,11 +7,14 @@ namespace CodeWarsPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a string");
-            string myString = Console.ReadLine();
+            Console.WriteLine("Enter a number");
+            int myInt = Convert.ToInt16(Console.ReadLine());
+            var test = Diamond.Print(myInt);
+            Console.WriteLine(test);
+
 
             // Dubstep
-            Console.WriteLine(Dubstep.SongDecoder(myString));
+            //Console.WriteLine(Dubstep.SongDecoder(myString));
 
             // Vowel Count
             // Console.WriteLine(VowelCount.GetVowelCount(myString));
