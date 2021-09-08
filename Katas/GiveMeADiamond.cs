@@ -44,6 +44,10 @@ namespace CodeWarsPractice
     {
         public static string Print(int n)
         {
+            if (n < 0 || n % 2 == 0)
+            {
+                throw new Exception("The integer cannot be negative or be even. Please enter an odd number.");
+            }
             string a = "*";
             string newString = "";
             for (var i = 0; i < n; i++) 
