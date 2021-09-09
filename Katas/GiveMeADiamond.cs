@@ -48,13 +48,39 @@ namespace CodeWarsPractice
             {
                 throw new Exception("The integer cannot be negative or be even. Please enter an odd number.");
             }
-            string a = "*";
-            string newString = "";
-            for (var i = 0; i < n; i++) 
-                {
-                    newString += a;
-                }
-            return newString;
+
+            string[] a = new string[n];
+            int MidpointOdd = (int)Math.Ceiling((double)n / 2);
+
+            for (var i = 0; i < MidpointOdd; i++)
+            {
+                a[i] = "*";
+                a[a.Length] = "*";
+            }
+
+            //var a = new List<string>();
+            //for (int i = n; i < 0; i = i-2)
+            //{
+            //    for (int j = 0; j <= i; j++)
+            //    {
+            //        a[].Add("*");
+            //    }
+            //    a[i].Append("\n");
+            //}
+            //return;
+
+
+
+            
+            //string a = "*";
+            //string newString = "";
+            //for (var i = 0; i < n; i++) 
+            //    {
+            //        newString += a;
+            //    }
+            //return newString;
+
+
             // take in the integer n
             // string base = "*\n"
             // List string diamondList = new List()
