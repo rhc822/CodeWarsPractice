@@ -44,25 +44,27 @@ namespace CodeWarsPractice
     {
         public static string Print(int n)
         {
-            if (n < 0 || n % 2 == 0)
+            // Validation check if negative / even number / or 0
+            if (n < 0 || n % 2 == 0 || n == 0)
             {
-                throw new Exception("The integer cannot be negative or be even. Please enter an odd number.");
+                return null;
+                //throw new Exception("The integer cannot be negative or be even. Please enter an odd number.");
             }
 
             string[] a = new string[n];
-            int arrayIndexMidpoint = ((int)Math.Ceiling((double)n / 2))-1;
+            int arrayIndexMidpoint = ((int)Math.Ceiling((double)n / 2))-1; // Find the index midpoint of the provided integer
 
+            // Series of checks that create the string array based on conditions
             for (int i = 0; i < a.Length; i++)
             {
                 if (i == 0)
                 {
-                    a[0] = "*\n";
+                    for (int j = 0; j < arrayIndexMidpoint; j++)
+                    {
+                        a[0] += " ";
+                    }
+                    a[0] += "*\n";
                 }
-
-                //else if (i == a.Length)
-                //{
-                //    a[i] = "*\n";
-                //}
 
                 else if (i == arrayIndexMidpoint)
                 {
@@ -76,13 +78,15 @@ namespace CodeWarsPractice
                 else if (i > arrayIndexMidpoint)
                 {
                     a[i] = a[arrayIndexMidpoint - (Math.Abs(arrayIndexMidpoint - i))];
-                    //a[i] = a[Math.Abs(arrayIndexMidpoint - Array.IndexOf(a, a[i]))];
                 }
 
                 else 
                 {
-                    for (int j = 0; j < i + 2; j++)
-                    //for(int j = 0; j < Array.IndexOf(a, a[i+2]); j++)
+                    for (int j = 0; j < arrayIndexMidpoint - i; j++)
+                    {
+                        a[i] += " ";
+                    }
+                    for (int k = 0; k < (i * 2) + 1; k++)
                     {
                         a[i] += "*";
                     }
@@ -90,49 +94,8 @@ namespace CodeWarsPractice
                 }
             }
 
-            return string.Join("", a);
+            return string.Join("", a); // Put the array in a single string
 
-            //var a = new List<string>();
-            //for (int i = n; i < 0; i = i-2)
-            //{
-            //    for (int j = 0; j <= i; j++)
-            //    {
-            //        a[].Add("*");
-            //    }
-            //    a[i].Append("\n");
-            //}
-            //return;
-
-
-
-            
-            //string a = "*";
-            //string newString = "";
-            //for (var i = 0; i < n; i++) 
-            //    {
-            //        newString += a;
-            //    }
-            //return newString;
-
-
-            // take in the integer n
-            // string base = "*\n"
-            // List string diamondList = new List()
-            // int counter = 0
-            // while (i <= n)
-            //  {
-            //      base.add(base)
-            //      i++
-            //  }
-            // foreach string s in diamondList
-            // {
-            //      
-            // }
-            // print d, n number of times
-            // if 3, print this...
-            // if 5, print this...
-            // better algorithm, hm, 
-            //throw new NotImplementedException();
         }
     }
 }
