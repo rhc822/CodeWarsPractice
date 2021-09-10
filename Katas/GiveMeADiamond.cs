@@ -50,13 +50,47 @@ namespace CodeWarsPractice
             }
 
             string[] a = new string[n];
-            int MidpointOdd = (int)Math.Ceiling((double)n / 2);
+            int arrayIndexMidpoint = ((int)Math.Ceiling((double)n / 2))-1;
 
-            for (var i = 0; i < MidpointOdd; i++)
+            for (int i = 0; i < a.Length; i++)
             {
-                a[i] = "*";
-                a[a.Length] = "*";
+                if (i == 0)
+                {
+                    a[0] = "*\n";
+                }
+
+                //else if (i == a.Length)
+                //{
+                //    a[i] = "*\n";
+                //}
+
+                else if (i == arrayIndexMidpoint)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        a[i] += "*";
+                    }
+                    a[i] += "\n";
+                }
+
+                else if (i > arrayIndexMidpoint)
+                {
+                    a[i] = a[arrayIndexMidpoint - (Math.Abs(arrayIndexMidpoint - i))];
+                    //a[i] = a[Math.Abs(arrayIndexMidpoint - Array.IndexOf(a, a[i]))];
+                }
+
+                else 
+                {
+                    for (int j = 0; j < i + 2; j++)
+                    //for(int j = 0; j < Array.IndexOf(a, a[i+2]); j++)
+                    {
+                        a[i] += "*";
+                    }
+                    a[i] += "\n";
+                }
             }
+
+            return string.Join("", a);
 
             //var a = new List<string>();
             //for (int i = n; i < 0; i = i-2)
