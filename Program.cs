@@ -7,11 +7,20 @@ namespace CodeWarsPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number");
-            int myInt = Convert.ToInt16(Console.ReadLine());
-            var test = Diamond.Print(myInt);
-            Console.WriteLine(test);
 
+            //TwoToOne
+            Console.WriteLine("Please enter string 1");
+            string s1 = Console.ReadLine();
+            Console.WriteLine("Please enter string 2");
+            string s2 = Console.ReadLine();
+            Console.WriteLine(TwoToOne.Longest(s1, s2));
+            
+
+            //Give Me A Diamond
+            //Console.WriteLine("Enter a number");
+            //int myInt = Convert.ToInt16(Console.ReadLine());
+            //var diamondString = Diamond.Print(myInt);
+            //Console.WriteLine(diamondString);
 
             // Dubstep
             //Console.WriteLine(Dubstep.SongDecoder(myString));
