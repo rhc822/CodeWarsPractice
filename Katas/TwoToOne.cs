@@ -25,18 +25,14 @@ namespace CodeWarsPractice
     {
         public static string Longest(string s1, string s2)
         {
-            string a = s1 + s2;
-            IEnumerable<char> b =  a.Distinct();
-            string c = "";
-            //string a = "\n\n\n" + s1 + "\n" + s2;
-            foreach (var i in b)
+            string combinedStrings = s1 + s2;
+            IEnumerable<char> charEnum =  combinedStrings.Distinct().OrderBy(z => z);
+            string distinctSortedString = "";
+            foreach (var i in charEnum)
             {
-                c += Convert.ToString(i);
+                distinctSortedString += Convert.ToString(i);
             }
-            return c;
-            // isolate the unique characters in each string
-            // compare the strings together to determine the unique values between the two
-            // 
+            return distinctSortedString;
         }
     }
 }
