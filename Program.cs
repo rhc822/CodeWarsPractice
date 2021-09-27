@@ -11,10 +11,10 @@ namespace CodeWarsPractice
             Console.WriteLine("Please enter the coupon code");
             string s = Console.ReadLine();
             bool b = TheCouponCode.CheckCoupon
-                (s,
-                "123",
-                DateTime.Today.GetDateTimeFormats('D')[1],
-                "September 30, 2021");
+                (s, // Customer coupon number
+                "123", // Valid coupon number
+                DateTime.Today.GetDateTimeFormats('D')[1], // Current date
+                "September 26, 2021"); // Expiration date
             if (b == true)
             {
                 Console.WriteLine("\n\nYay! You can use the coupon!");

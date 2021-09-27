@@ -28,7 +28,12 @@ namespace CodeWarsPractice
     {
         public static bool CheckCoupon(string enteredCode, string correctCode, string currentDate, string expirationDate)
         {
-            return false;
+            if (enteredCode == correctCode && DateTime.Parse(currentDate) <= DateTime.Parse(expirationDate))
+            {
+                return true;
+            }
+            else return false;
+            
         }
     }
 }
