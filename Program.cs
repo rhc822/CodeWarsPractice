@@ -7,22 +7,26 @@ namespace CodeWarsPractice
     {
         static void Main(string[] args)
         {
+
+
+
+
             //The Coupon Code
-            Console.WriteLine("Please enter the coupon code");
-            string s = Console.ReadLine();
-            bool b = TheCouponCode.CheckCoupon
-                (s, // Customer coupon number
-                "123", // Valid coupon number
-                DateTime.Today.GetDateTimeFormats('D')[1], // Current date
-                "September 26, 2021"); // Expiration date
-            if (b == true)
-            {
-                Console.WriteLine("\n\nYay! You can use the coupon!");
-            }
-            else
-            {
-                Console.WriteLine("\n\nYou can't use this coupon! It's invalid! Are you trying to cheat me!?");
-            }
+            //Console.WriteLine("Please enter the coupon code");
+            //string s = Console.ReadLine();
+            //bool b = TheCouponCode.CheckCoupon
+            //    (s, // Customer coupon number
+            //    "123", // Valid coupon number
+            //    DateTime.Today.GetDateTimeFormats('D')[1], // Current date
+            //    "September 26, 2021"); // Expiration date
+            //if (b == true)
+            //{
+            //    Console.WriteLine("\n\nYay! You can use the coupon!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("\n\nYou can't use this coupon! It's invalid! Are you trying to cheat me!?");
+            //}
 
             //TwoToOne
             //Console.WriteLine("Please enter string 1");
