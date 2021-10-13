@@ -9,7 +9,12 @@ namespace CodeWarsPractice
         {
 
 
-
+            //Title Case
+            Console.WriteLine("Enter a string of text to be converted to title case");
+            string t = Console.ReadLine();
+            Console.WriteLine("Enter a list of exceptions (minor words)");
+            string e = Console.ReadLine();
+            Console.WriteLine(TitleCase.MakeTitleCase(t, e));
 
             //The Coupon Code
             //Console.WriteLine("Please enter the coupon code");
