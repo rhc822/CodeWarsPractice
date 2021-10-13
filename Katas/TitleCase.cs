@@ -25,9 +25,9 @@ namespace CodeWarsPractice
     
     ###Example
 
-    Kata.TitleCase("a clash of KINGS", "a an the of")   => "A Clash of Kings"
-    Kata.TitleCase("THE WIND IN THE WILLOWS", "The In") => "The Wind in the Willows"
-    Kata.TitleCase("the quick brown fox")               => "The Quick Brown Fox"
+        Kata.TitleCase("a clash of KINGS", "a an the of")   => "A Clash of Kings"
+        Kata.TitleCase("THE WIND IN THE WILLOWS", "The In") => "The Wind in the Willows"
+        Kata.TitleCase("the quick brown fox")               => "The Quick Brown Fox"
 
     */
 
@@ -35,7 +35,14 @@ namespace CodeWarsPractice
     {
         public static string MakeTitleCase(string title, string minorWords = "")
         {
-            return "You got it brother";
+            // make all parameter strings lowercase
+            // convert title string and minorWords parameter strings to string arrays
+            // for each string in the array make the first letter of the string uppercase
+            // if title string contains a word in the minorWords string array, ignore that string
+            // convert title string array back to string and return 
+
+
+            return "test";
         }
     }
 }
