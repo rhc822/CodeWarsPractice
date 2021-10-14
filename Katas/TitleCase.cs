@@ -37,9 +37,22 @@ namespace CodeWarsPractice
     {
         public static string MakeTitleCase(string title, string minorWords = "")
         {
-            // make all parameter strings lowercase
-            // convert title string and minorWords parameter strings to string arrays
+            // make all parameter strings lowercase and convert to string arrays
+            string [] a = title.ToLower().Split(' ');
+            string [] b = minorWords.ToLower().Split(' ');
+
             // for each string in the array make the first letter of the string uppercase
+            foreach(string z in a)
+            {
+                if (z.Contains(b.Any())
+                //if (z.Contains(z, for (int i = 0; i < b.Length; i++) { })
+                    {
+
+                    }
+                char.ToUpper(z[0]);
+            }
+            
+
             // if title string contains a word in the minorWords string array, ignore that string
             // convert title string array back to string and return 
 
